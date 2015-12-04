@@ -3,9 +3,14 @@ p.verbiage
 p.verbiage
   | This process will take about 10 minutes, and you should have:
 verbiage
-  ul
-    li= 'Access to your financial records.'
-    li= 'A cell phone that can receive texts.'
+  h4= "To do this online you'll need"
+  ul.evidence-list
+    li= 'A cell phone that can receive texts'
+    li= 'Your Social Security Number'
+  h4= "And one of the following"
+  ul.evidence-list
+    li= 'A credit card number, or'
+    li= 'The account number of a mortgage, home equity or car loan in your name'
 
 .form-group.form-group-button-section
   = link_to "I'm ready", display_checklist_url, class: 'btn icon-standard button-standard'

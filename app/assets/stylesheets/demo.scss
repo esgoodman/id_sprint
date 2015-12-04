@@ -39,7 +39,7 @@
 
 .checkboxes label {
   display: block;
-  //float: right;
+  //float: left;
   padding-right: 10px;
   white-space: nowrap;
 }
@@ -70,4 +70,25 @@ a.bad-link {
 
 .checklist-form {
   margin-bottom: 15px;
+}
+
+.pair {
+  display: block;
+}
+
+.pair label {
+  float: right;
+}
+
+.lc {
+  @include span-columns(4);
+
+}
+
+.fc {
+  @include span-columns(8);
+}
+
+.evidence-list {
+  //TODO: indent second line
 }

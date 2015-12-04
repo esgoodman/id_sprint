@@ -1,6 +1,6 @@
 class DisplayController < ApplicationController
  def vetlist
-   unless anything_checked?
+   unless anything_checked? && params['phone'] && params['phone'] == 'phoneyes'
      redirect_to display_noevidence_url and return
    end
    redirect_to display_startprocess_url
@@ -8,6 +8,6 @@ class DisplayController < ApplicationController
 
   private
   def anything_checked?
-    return params.key?('mortgage') || params.key?('credit-card') || params.key?('home-eq') || params.key?('car')
+    return params.key?('financial') && params['financial'] != 'none'
   end
 end

@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   get 'display/bailout' => 'display#bailout'
   get 'display/noevidence' => 'display#noevidence'
   get 'display/startprocess' => 'display#startprocess'
+  get 'display/pageone' => 'display#pageone'
   post 'display/vetlist' => 'display#vetlist'
 
 

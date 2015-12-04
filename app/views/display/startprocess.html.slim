@@ -1,17 +1,40 @@
 .verbiage
   p= "OK! Let's get started. To help us identify you, please enter the following information."
   =form_tag({controller: 'display', action: 'pageone'}, method: 'post', class: 'checklist-form')
-    =label_tag 'first_name', 'First Name'
-    =text_field_tag 'first_name', prompt: 'your first name here'
-    =label_tag 'last_name', 'Last Name'
-    =text_field_tag 'last_name', prompt: 'your last, or family name here'
-    =label_tag 'address1', 'Street Address'
-    =text_field_tag 'address1', prompt: 'your street address'
-    =text_field_tag 'address2', prompt: 'line 2 of your street address'
-    =label_tag 'city', 'City'
-    =text_field_tag 'city', prompt: 'your city'
-    =label_tag 'state', 'State'
-    =text_field_tag 'state', size: "2"
-    =label_tag 'zip', 'Zip Code'
-    =text_field_tag 'zip', prompt: 'zip code'
-    
+    .pair
+      .lc
+        =label_tag 'first_name', 'First Name'
+      .fc
+        =text_field_tag 'first_name', nil, placeholder: 'your first name here'
+    .pair
+      .lc
+        =label_tag 'last_name', 'Last Name'
+      .fc
+        =text_field_tag 'last_name',  nil, placeholder: 'your last, or family name here'
+    .pair
+      .lc
+        =label_tag 'address1', 'Street Address'
+      .fc
+        =text_field_tag 'address1',  nil, placeholder: 'your street address'
+    .pair
+      .lc
+        '&nbsp;
+      .fc
+        =text_field_tag 'address2',  nil, placeholder: 'line 2 of your street address'
+    .pair
+      .lc
+        =label_tag 'city', 'City'
+      .fc
+        =text_field_tag 'city',  nil, placeholder: 'your city'
+    .pair
+      .lc
+        =label_tag 'state', 'State'
+      .fc
+        =text_field_tag 'state',  nil, size: "2"
+        =label_tag 'zip', 'Zip Code'
+        =text_field_tag 'zip',  nil, placeholder: 'zip code'
+    .pair
+      .lc
+        =label_tag 'ssn', 'SSN'
+      .fc
+        =text_field_tag 'ssn',  nil, placeholder: 'social security number', size: 11

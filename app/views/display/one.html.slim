@@ -1,15 +1,24 @@
 .title= 'Welcome to Get Transcript'
 
 verbiage
-  p= 'This is the location to securely access your tax records.'
+  p= 'Get Transcript allows you to access your personal tax information and proof of income information online.'
 verbiage
-  p= 'If this is your first time here, we\'ll need you to verify your identity, to ensure that only you can get access to your tax records.'
-
+  p
+    | Before you can access your transcript, you need to verify your identity.
+    | Secure Accounts is the new way to prove your identity online. This process will take about 10 minutes.
+  h4= "To do this online you'll need"
+  ul.evidence-list
+    li= 'A cell phone that can receive texts'
+    li= 'Your Social Security Number or Taxpayer Identification Number'
+  h4= "And one of the following"
+  ul.evidence-list
+    li= 'A credit card number, or'
+    li= 'The account number of a mortgage, home equity or car loan in your name'
 .directives
   p
     'This is my first time here.
   .form-group.form-group-button-section
-    = link_to 'Get Started', display_need_url, class: 'btn icon-standard button-standard'
+    = link_to 'Verify my identity', display_checklist_url, class: 'btn icon-standard button-standard'
 
 
 .directives
