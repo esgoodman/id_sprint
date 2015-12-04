@@ -74,21 +74,34 @@ a.bad-link {
 
 .pair {
   display: block;
+  margin-top: 10px;
 }
 
 .pair label {
   float: right;
 }
 
+.pair > .fc label {
+  float: none;
+}
+
 .lc {
   @include span-columns(4);
+  margin-bottom: 10px;
 
 }
 
 .fc {
   @include span-columns(8);
+  margin-bottom: 10px;
 }
 
 .evidence-list {
   //TODO: indent second line
+}
+
+.special-case {
+  .lc label{
+    float: right;
+  }
 }
