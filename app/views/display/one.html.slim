@@ -1,0 +1,28 @@
+.title= 'Welcome to Get Transcript'
+
+verbiage
+  p= 'This is the location to securely access your tax records.'
+verbiage
+  p= 'If this is your first time here, we\'ll need you to verify your identity, to ensure that only you can get access to your tax records.'
+
+.directives
+  p
+    'This is my first time here.
+  .form-group.form-group-button-section
+    = link_to 'Get Started', display_need_url, class: 'btn icon-standard button-standard'
+
+
+.directives
+  p
+    'I've been here before.
+  p
+    'Log in below if you've previously created a UserID for any of the following applications:
+    ul
+      li= 'Get Transcript'
+      li= 'Identity Protection PIN (IP PIN)'
+      li= 'Online Payment Agreement (OPA)'
+
+  input type='text'
+  .form-group.form-group-button-section
+    a.btn.icon-standard.button-standard href='two'
+      'Sign in

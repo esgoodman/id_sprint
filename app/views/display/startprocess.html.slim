@@ -1,0 +1,17 @@
+.verbiage
+  p= "OK! Let's get started. To help us identify you, please enter the following information."
+  =form_tag({controller: 'display', action: 'pageone'}, method: 'post', class: 'checklist-form')
+    =label_tag 'first_name', 'First Name'
+    =text_field_tag 'first_name', prompt: 'your first name here'
+    =label_tag 'last_name', 'Last Name'
+    =text_field_tag 'last_name', prompt: 'your last, or family name here'
+    =label_tag 'address1', 'Street Address'
+    =text_field_tag 'address1', prompt: 'your street address'
+    =text_field_tag 'address2', prompt: 'line 2 of your street address'
+    =label_tag 'city', 'City'
+    =text_field_tag 'city', prompt: 'your city'
+    =label_tag 'state', 'State'
+    =text_field_tag 'state', size: "2"
+    =label_tag 'zip', 'Zip Code'
+    =text_field_tag 'zip', prompt: 'zip code'
+    

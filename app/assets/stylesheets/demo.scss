@@ -1,0 +1,73 @@
+@import "bourbon";
+@import "neat";
+
+.main-container {
+  @include span-columns(12);
+
+  margin-left: 45px;
+  margin-top: 60px;
+  max-width: 350px;
+  list-style-position: inside;
+}
+
+.logobar {
+  @include span-columns(12);
+  margin-left: 15px;
+}
+
+.verbiage {
+  @include span-columns(12);
+}
+
+.title {
+  margin-bottom: 15px;
+}
+
+.directives {
+  @include span-columns(12);
+  padding-top: 30px;
+}
+
+.lft {
+  @include span-columns(4);
+  @include shift(2)
+}
+
+.rest {
+  @include span-columns(6);
+}
+
+.checkboxes label {
+  display: block;
+  //float: right;
+  padding-right: 10px;
+  white-space: nowrap;
+}
+.checkboxes input {
+  vertical-align: middle;
+  display: block;
+  float: left;
+}
+.checkboxes label span {
+  vertical-align: middle;
+}
+
+.checkboxes input[type='radio'] {
+  margin-top: 2px;
+}
+
+.checkboxes {
+  margin-bottom: 50px;
+}
+
+.space {
+  margin-top: 20px;
+}
+
+a.bad-link {
+  color: red;
+}
+
+.checklist-form {
+  margin-bottom: 15px;
+}

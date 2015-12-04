@@ -1,0 +1,14 @@
+p.verbiage
+  | First, we need to know who you are.
+p.verbiage
+  | This process will take about 10 minutes, and you should have:
+verbiage
+  ul
+    li= 'Access to your financial records.'
+    li= 'A cell phone that can receive texts.'
+
+.form-group.form-group-button-section
+  = link_to "I'm ready", display_checklist_url, class: 'btn icon-standard button-standard'
+
+.form-group.form-group-button-section
+  = link_to "I don't have those", display_bailout_url, class: 'btn icon-standard button-standard'

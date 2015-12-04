@@ -1,0 +1,22 @@
+.verbiage
+  p= 'Do you have?'
+  =form_tag({controller: 'display', action: 'vetlist'}, method: 'post', class: 'checklist-form')
+    .checkboxes
+      =check_box_tag 'credit-card'
+      =label_tag 'credit-card', 'A Credit Card'
+      =check_box_tag 'mortgage'
+      =label_tag 'mortgage', 'A Mortgage'
+      =check_box_tag 'home-eq'
+      =label_tag 'home-eq', 'A Home Equity Loan'
+      =check_box_tag 'car'
+      =label_tag 'car', 'A Car Loan'
+      p.space= 'And do you have a mobile phone that can receive text messages?'
+      .lft
+        =radio_button_tag('phone', 'phoneyes')
+        =label_tag 'phoneyes', "Yes"
+      .rest
+        =radio_button_tag('phone', 'phoneno')
+        =label_tag 'phoneno', "No"
+    = button_tag('Next', type: 'submit', title:'Next',
+                   value: 'next', class: 'btn icon-standard button-standard')
+  =link_to "I don't have any of these", display_noevidence_url, class: 'bad-link'
