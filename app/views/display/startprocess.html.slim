@@ -1,6 +1,7 @@
+h4 ="OK! Let's get started."
 .verbiage
-  p= "OK! Let's get started. To help us identify you, please enter the following information."
-  =form_tag({controller: 'display', action: 'pageone'}, method: 'post', class: 'checklist-form')
+  p= "To help us identify you, please enter the following information."
+  =form_tag({controller: 'display', action: 'financial'}, method: 'post', class: 'checklist-form')
     .pair
       .lc
         =label_tag 'first_name', 'First Name'
@@ -26,7 +27,7 @@
         =label_tag 'city', 'City'
       .fc
         =text_field_tag 'city',  nil, placeholder: 'your city'
-    .special-case
+    .pair
       .lc
         =label_tag 'state', 'State'
       .fc
@@ -38,3 +39,5 @@
         =label_tag 'ssn', 'SSN'
       .fc
         =text_field_tag 'ssn',  nil, placeholder: 'social security number', size: 11
+    = button_tag('Next', type: 'submit', title: 'Next',
+                 value: 'next', class: 'btn icon-standard button-standard')

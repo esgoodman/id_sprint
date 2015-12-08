@@ -10,8 +10,12 @@ Rails.application.routes.draw do
   get 'display/bailout' => 'display#bailout'
   get 'display/noevidence' => 'display#noevidence'
   get 'display/startprocess' => 'display#startprocess'
-  get 'display/pageone' => 'display#pageone'
+  get 'display/phone' => 'display#phone'
+  get 'display/entercode' => 'display#entercode'
+  get 'display/wrongphone' => 'display#wrongphone'
+  post 'display/financial' => 'display#financial'
   post 'display/vetlist' => 'display#vetlist'
+  post 'display/checkcode' => 'display#checkcode'
 
 
 

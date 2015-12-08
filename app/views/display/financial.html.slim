@@ -1,0 +1,9 @@
+.verbiage
+  p You told us you have a #{evidence_method}. Please enter your account number:
+  =form_tag({controller: 'display', action: 'phone'}, method: 'get', class: 'checklist-form')
+    .pair
+      input
+    .pair
+      = button_tag('Next', type: 'submit', title: 'Next',
+                  value: 'next', class: 'btn icon-standard button-standard')
+  =link_to "I don't know that number", display_checklist_url

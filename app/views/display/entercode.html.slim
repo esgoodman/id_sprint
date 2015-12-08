@@ -1,0 +1,10 @@
+.verbiage
+  p
+    | We need to make sure you have a phone that is in our records.
+    | To do this, we will send the phone number entered below a text message with a code.
+  =form_tag({controller: 'display', action: 'checkcode'}, method: 'post', class: 'checklist-form')
+    .pair
+      input id='code'
+    .pair
+      = button_tag('Enter Code', type: 'submit', title: 'EnterCode',
+                   value: 'next', class: 'btn icon-standard button-standard')

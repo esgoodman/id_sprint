@@ -1,8 +1,8 @@
 .title= 'Welcome to Get Transcript'
 
-verbiage
+.verbiage
   p= 'Get Transcript allows you to access your personal tax information and proof of income information online.'
-verbiage
+.verbiage
   p
     | Before you can access your transcript, you need to verify your identity.
     | Secure Accounts is the new way to prove your identity online. This process will take about 10 minutes.
@@ -14,12 +14,13 @@ verbiage
   ul.evidence-list
     li= 'A credit card number, or'
     li= 'The account number of a mortgage, home equity or car loan in your name'
+.verbiage
+  p= "It’s a criminal offense to obtain someone else’s personal information without their permission."
 .directives
   p
     'This is my first time here.
   .form-group.form-group-button-section
     = link_to 'Verify my identity', display_checklist_url, class: 'btn icon-standard button-standard'
-
 
 .directives
   p
