@@ -1,20 +1,21 @@
-h4 ="OK! Let's get started."
+h4 ="Establish who you are"
 .verbiage
-  p= "To help us identify you, please enter the following information."
+  p= "To keep your information safe, we need you to give us some information before we release any tax records. You will not be charged any money and we will not see your account balance."
+  h5 ="Please enter the following information"
   =form_tag({controller: 'display', action: 'financial'}, method: 'post', class: 'checklist-form')
     .pair
       .lc
-        =label_tag 'first_name', 'First Name'
+        =label_tag 'first_name', 'First name'
       .fc
         =text_field_tag 'first_name', nil, placeholder: 'your first name here'
     .pair
       .lc
-        =label_tag 'last_name', 'Last Name'
+        =label_tag 'last_name', 'Last name'
       .fc
         =text_field_tag 'last_name',  nil, placeholder: 'your last, or family name here'
     .pair
       .lc
-        =label_tag 'address1', 'Street Address'
+        =label_tag 'address1', 'Street address'
       .fc
         =text_field_tag 'address1',  nil, placeholder: 'your street address'
     .pair
@@ -32,11 +33,11 @@ h4 ="OK! Let's get started."
         =label_tag 'state', 'State'
       .fc
         =text_field_tag 'state',  nil, size: "2"
-        =label_tag 'zip', 'Zip'
+        =label_tag 'zip', 'Zip code'
         =text_field_tag 'zip',  nil, placeholder: 'zip code'
     .pair
       .lc
-        =label_tag 'ssn', 'SSN'
+        =label_tag 'ssn', 'Social security number'
       .fc
         =text_field_tag 'ssn',  nil, placeholder: 'social security number', size: 11
     = button_tag('Next', type: 'submit', title: 'Next',
