@@ -1,4 +1,6 @@
 class DisplayController < ApplicationController
+
+  before_action :logothing, except: [:transcript, :usaccount]
   def vetlist
     unless anything_checked? && params['phone'] && params['phone'] == 'phoneyes'
       redirect_to display_noevidence_url and return
@@ -37,6 +39,17 @@ class DisplayController < ApplicationController
     redirect_to display_usaccount_url
   end
 
+  def transcript
+    @irs_only = true
+  end
+
+  def usaccount
+    @irs_only = true
+  end
+
+  def logothing
+    @irs_only = false
+  end
   private
   def anything_checked?
     return params.key?('financial') && params['financial'] != 'none'

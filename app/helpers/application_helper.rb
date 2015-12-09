@@ -11,8 +11,17 @@ module ApplicationHelper
   end
 
   def display_logo
-    unless session[:provider] == :verizon
-      return
+    unless session[:provider] == "verizon"
+      return image_tag('logo')
     end
+    if @irs_only
+      return image_tag('logo')
+    end
+    return image_tag('verizon_logo', height:36, width: 159)
+  end
+
+  def clear_session
+    session.delete(:provider)
+    session.delete(:method)
   end
 end

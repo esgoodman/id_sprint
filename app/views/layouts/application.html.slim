@@ -30,6 +30,6 @@ html lang="#{I18n.locale}"
   body class="#{Rails.env}-env"
     .logobar
       a.navbar-brand
-        =image_tag('logo')
+        =display_logo
     .main-container
       == yield
