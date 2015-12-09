@@ -1,15 +1,18 @@
 h3 Choose your identity provider
 .verbiage
-  p You can choose who verifies your identity.
+  p To prevent identity theft, we need to make sure we only show tax records to the right people.
+  p You can choose to have your identity verified by a certified company or by the US Government.
   =form_tag({controller: 'display', action: 'idpchoice'}, method: 'post', class: 'checklist-form')
     .pair
       .lc
         =radio_button_tag 'idp', :irs
+        =label 'idp', 'Continue with '
       .fc
         =image_tag('logo')
     .pair
       .lc
         =radio_button_tag 'idp', :verizon
+        =label 'idp', "I'd rather use ", style: "vertical-align: middle"
       .fc
         =image_tag('verizon_logo', width: 159, height: 36)
     =button_tag('Verify Identity', type: 'submit', title: 'Next',

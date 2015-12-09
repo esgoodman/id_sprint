@@ -13,6 +13,7 @@ class DisplayController < ApplicationController
 
   def idpchoice
     session[:provider] = params['idp']
+    redirect_to display_checklist_url
   end
 
   def vetphone
