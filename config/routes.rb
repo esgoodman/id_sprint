@@ -16,6 +16,7 @@ Rails.application.routes.draw do
   get 'display/wrongphone' => 'display#wrongphone'
   get 'display/transcript' => 'display#transcript'
   get 'display/usaccount' => 'display#usaccount'
+  get 'display/chooseidp' => 'display#chooseidp'
   post 'display/createaccount' => 'display#createaccount'
   post 'display/financial' => 'display#financial'
   post 'display/vetlist' => 'display#vetlist'
@@ -23,6 +24,7 @@ Rails.application.routes.draw do
   post 'display/vetphone' => 'display#vetphone'
   post 'display/request_transcript' => 'display#request_transcript'
   post 'display/reset_method' => 'display#reset_method'
+  post 'display/idpchoice' => 'display#idpchoice'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

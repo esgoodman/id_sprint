@@ -11,6 +11,10 @@ class DisplayController < ApplicationController
     redirect_to root_url
   end
 
+  def idpchoice
+    session[:provider] = params['idp']
+  end
+
   def vetphone
     if params['p1'].to_s[1] == '2'
       redirect_to display_wrongphone_url and return

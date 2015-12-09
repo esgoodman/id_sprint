@@ -9,4 +9,10 @@ module ApplicationHelper
     }
     evidence.fetch(session[:method].present? ? session[:method] : 'none')
   end
+
+  def display_logo
+    unless session[:provider] == :verizon
+      return
+    end
+  end
 end

@@ -1,0 +1,16 @@
+h3 Choose your identity provider
+.verbiage
+  p You can choose who verifies your identity.
+  =form_tag({controller: 'display', action: 'idpchoice'}, method: 'post', class: 'checklist-form')
+    .pair
+      .lc
+        =radio_button_tag 'idp', :irs
+      .fc
+        =image_tag('logo')
+    .pair
+      .lc
+        =radio_button_tag 'idp', :verizon
+      .fc
+        =image_tag('verizon_logo', width: 159, height: 36)
+    =button_tag('Verify Identity', type: 'submit', title: 'Next',
+                       value: 'next', class: 'btn')

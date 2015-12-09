@@ -89,7 +89,9 @@ a.bad-link {
 .lc {
   @include span-columns(4);
   margin-bottom: 10px;
-
+  input {
+    float: right;
+  }
 }
 
 .fc {
