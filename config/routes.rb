@@ -13,11 +13,13 @@ Rails.application.routes.draw do
   get 'display/phone' => 'display#phone'
   get 'display/entercode' => 'display#entercode'
   get 'display/wrongphone' => 'display#wrongphone'
+  get 'display/transcript' => 'display#transcript'
   post 'display/financial' => 'display#financial'
   post 'display/vetlist' => 'display#vetlist'
   post 'display/checkcode' => 'display#checkcode'
-
-
+  post 'display/vetphone' => 'display#vetphone'
+  post 'display/request_transcript' => 'display#request_transcript'
+  post 'display/reset_method' => 'display#reset_method'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

@@ -4,8 +4,9 @@ module ApplicationHelper
       'credit-card' => 'credit card',
       'mortgage' => 'mortgage',
       'home-eq' => 'home equity loan',
-      'car' => 'car loan'
+      'car' => 'car loan',
+      'none' => 'none'
     }
-    evidence.fetch(session[:method])
+    evidence.fetch(session[:method].present? ? session[:method] : 'none')
   end
 end

@@ -6,5 +6,4 @@ h3= 'We probably cannot verify your identity'
   .form-group.form-group-button-section
     = link_to 'Try Anyway', display_startprocess_url
   .form-group.form-group-button-section
-    a href='https://sa.www4.irs.gov/irfof-tra/start.do'
-      =image_tag('button_mail_transcript', height: '45', width: '132')
+    = link_to 'Get Transcript by Mail', 'https://sa.www4.irs.gov/irfof-tra/start.do', class: 'btn'

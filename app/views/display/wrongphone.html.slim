@@ -1,6 +1,7 @@
-h3 Your Phone Number
+h3 Please try again
 .verbiage
-  p We need to ensure you have a phone we believe is yours. Please enter the number of your mobile phone.
+  p We were not able to find this phone number in our records.
+    | If you have another phone number that might work, please enter it now
   =form_tag({controller: 'display', action: 'vetphone'}, method: 'post', class: 'checklist-form')
     .pair
       .lc
@@ -10,5 +11,5 @@ h3 Your Phone Number
         input.phone id='p2' size=3
         input.phone id='p3' size=4
     .pair
-      = button_tag('Enter Number', type: 'submit', title: 'Next',
+      = button_tag('Next', type: 'submit', title: 'Next',
                    value: 'next', class: 'btn')

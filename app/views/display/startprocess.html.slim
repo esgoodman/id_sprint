@@ -6,38 +6,46 @@ h4 ="OK! Let's get started."
       .lc
         =label_tag 'first_name', 'First Name'
       .fc
-        =text_field_tag 'first_name', nil, placeholder: 'your first name here'
+        =text_field_tag 'first_name', nil, placeholder: 'your first name here', size: 32
     .pair
       .lc
         =label_tag 'last_name', 'Last Name'
       .fc
-        =text_field_tag 'last_name',  nil, placeholder: 'your last, or family name here'
+        =text_field_tag 'last_name',  nil, placeholder: 'your last, or family name here', size: 32
     .pair
       .lc
         =label_tag 'address1', 'Street Address'
       .fc
-        =text_field_tag 'address1',  nil, placeholder: 'your street address'
+        =text_field_tag 'address1',  nil, placeholder: 'your street address', size: 32
     .pair
       .lc
         '&nbsp;
       .fc
-        =text_field_tag 'address2',  nil, placeholder: 'line 2 of your street address'
+        =text_field_tag 'address2',  nil, placeholder: 'line 2 of your street address', size: 32
     .pair
       .lc
         =label_tag 'city', 'City'
       .fc
-        =text_field_tag 'city',  nil, placeholder: 'your city'
+        =text_field_tag 'city',  nil, placeholder: 'your city', size: 32
     .pair
       .lc
         =label_tag 'state', 'State'
       .fc
         =text_field_tag 'state',  nil, size: "2"
+    .pair
+      .lc
         =label_tag 'zip', 'Zip'
+      .fc
         =text_field_tag 'zip',  nil, placeholder: 'zip code'
     .pair
       .lc
         =label_tag 'ssn', 'SSN'
       .fc
-        =text_field_tag 'ssn',  nil, placeholder: 'social security number', size: 11
+        =text_field_tag 'ssn',  nil, placeholder: 'social security number', size: 13
+    .pair
+      .lc
+        =label_tag 'filingtype', 'Filing Type'
+      .fc
+        =select_tag 'filingtype', options_for_select(['','Single', 'Married', 'Head of Household'])
     = button_tag('Next', type: 'submit', title: 'Next',
-                 value: 'next', class: 'btn icon-standard button-standard')
+                 value: 'next', class: 'btn')

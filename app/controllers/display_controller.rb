@@ -15,8 +15,15 @@ class DisplayController < ApplicationController
   end
 
   def checkcode
-    redirect_to 
+    redirect_to
   end
+
+  def reset_method
+    session[:method] = nil
+    render :financial
+  end
+
+  helper_method :reset_method
 
   private
   def anything_checked?

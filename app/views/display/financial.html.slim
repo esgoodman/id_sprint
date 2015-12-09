@@ -1,9 +1,26 @@
 .verbiage
-  p You told us you have a #{evidence_method}. Please enter your account number:
-  =form_tag({controller: 'display', action: 'phone'}, method: 'get', class: 'checklist-form')
-    .pair
-      input
-    .pair
-      = button_tag('Next', type: 'submit', title: 'Next',
-                  value: 'next', class: 'btn icon-standard button-standard')
-  =link_to "I don't know that number", display_checklist_url
+
+  -if evidence_method == 'none'
+    p Please enter your loan type or credit card and the associated account number:
+    =form_tag({controller: 'display', action: 'phone'}, method: 'get', class: 'checklist-form')
+      .pair
+        .lc
+          =label_tag 'type', 'Record Type'
+        .fc
+          =select_tag 'type', options_for_select(['Credit Card', 'Mortgage', 'Home Equity Loan', 'Car Loan'])
+      .pair
+        .lc
+          =label_tag 'acct', 'Account Number'
+        .fc
+          =text_field_tag 'acct', nil, placeholder: 'your account number', size: 42
+      .pair
+        = button_tag('Next', type: 'submit', title: 'Next', value: 'next', class: 'btn')
+  -else
+    p You told us you have a #{evidence_method}. Please enter your account number:
+    =form_tag({controller: 'display', action: 'phone'}, method: 'get', class: 'checklist-form')
+      .pair
+        input
+      .pair
+        = button_tag('Next', type: 'submit', title: 'Next',
+                    value: 'next', class: 'btn')
+    =link_to "I don't know that number", {:controller => 'display', :action => "reset_method"}, method: :post
