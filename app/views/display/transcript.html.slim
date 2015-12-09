@@ -1,2 +1,14 @@
 h3 Which type of transcript do you need?
 =form_tag({controller: 'display', action: 'request_transcript'}, method: 'post', class: 'checklist-form')
+  .pair
+    .lc
+      =label_tag 'type', 'Type'
+    .fc
+      =text_field_tag 'type', nil, placeholder: 'transcript type here'
+  .pair
+    .lc
+      =label_tag 'year', 'Year'
+    .fc
+      =text_field_tag 'year', nil, placeholder: 'transcript year'
+  = button_tag('Request', type: 'submit', title: 'Next',
+                     value: 'next', class: 'btn')

@@ -7,6 +7,10 @@ class DisplayController < ApplicationController
     redirect_to display_startprocess_url
   end
 
+  def createaccount
+    redirect_to root_url
+  end
+
   def vetphone
     if params['p1'].to_s[1] == '2'
       redirect_to display_wrongphone_url and return
@@ -15,15 +19,18 @@ class DisplayController < ApplicationController
   end
 
   def checkcode
-    redirect_to
+    redirect_to display_transcript_url
   end
 
   def reset_method
     session[:method] = nil
     render :financial
   end
-
   helper_method :reset_method
+
+  def request_transcript
+    redirect_to display_usaccount_url
+  end
 
   private
   def anything_checked?

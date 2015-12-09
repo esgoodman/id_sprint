@@ -75,6 +75,7 @@ a.bad-link {
 .pair {
   display: block;
   margin-top: 10px;
+  @include span-columns(12)
 }
 
 .pair label {

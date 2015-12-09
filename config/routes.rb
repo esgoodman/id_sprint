@@ -4,6 +4,7 @@ Rails.application.routes.draw do
 
   # You can have the root of your site routed with "root"
   root 'display#one'
+  get 'display/two' => 'display#two'
   get 'display/need' => 'display#need'
   get 'display/mail' => 'display#mail'
   get 'display/checklist' => 'display#checklist'
@@ -14,6 +15,8 @@ Rails.application.routes.draw do
   get 'display/entercode' => 'display#entercode'
   get 'display/wrongphone' => 'display#wrongphone'
   get 'display/transcript' => 'display#transcript'
+  get 'display/usaccount' => 'display#usaccount'
+  post 'display/createaccount' => 'display#createaccount'
   post 'display/financial' => 'display#financial'
   post 'display/vetlist' => 'display#vetlist'
   post 'display/checkcode' => 'display#checkcode'
